@@ -101,7 +101,7 @@ p { margin: 0; }
 .portada__in { position: relative; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); min-height: min(100svh, 900px); max-width: calc(var(--ancho) + 2 * var(--margen)); margin: 0 auto; padding: 0 0 0 var(--margen); }
 .portada__txt { padding: 132px 56px 72px 0; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
 .portada__t { font-size: clamp(3rem, 7vw, 6.1rem); letter-spacing: -.05em; line-height: .95; margin-bottom: 26px; }
-.t-laser { color: var(--laser); text-shadow: 0 0 22px rgba(60, 240, 122, .35); }
+.t-laser { color: var(--laser); }
 .portada__sub { font-size: clamp(1.05rem, 1.35vw, 1.2rem); color: #c6d0de; max-width: 50ch; }
 .portada__sub strong { color: #fff; font-weight: 600; }
 .portada__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
@@ -110,7 +110,7 @@ p { margin: 0; }
 .portada__datos b, .nota-g { color: #fff; font-size: 1.12rem; font-weight: 650; letter-spacing: -.02em; display: inline-flex; align-items: center; gap: 8px; }
 .estrellas { display: inline-flex; gap: 2px; color: var(--laser); }
 .estrellas .e { width: 14px; height: 14px; }
-.portada__foto { position: relative; margin: 0; min-height: 100%; }
+.portada__foto { position: relative; margin: 0; min-height: 100%; overflow: hidden; }
 .portada__foto picture, .portada__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
 .portada__foto img { transform: scale(1.05); transition: transform 1.8s var(--ease); }
 .portada__foto img.ok { transform: none; }
