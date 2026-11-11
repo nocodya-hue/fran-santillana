@@ -317,3 +317,36 @@ h1.titulo { font-size: clamp(3rem, 7.4vw, 5.6rem); }
   .visor__ant { left: calc(50% - 64px); }
   .visor__sig { right: calc(50% - 64px); }
 }
+
+/* ---------- v7: móvil más espaciado ---------- */
+.desliza { display: none; }
+@media (max-width: 860px) {
+  .desliza { display: inline-flex; align-items: center; gap: 8px; font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--oro-osc); margin: -20px 0 22px; }
+  .desliza .ico { width: 16px; height: 16px; }
+  .desliza--quien { margin: clamp(48px, 7vw, 72px) 0 16px; }
+  .desliza--quien + .quien__obra { margin-top: 0; }
+}
+@media (max-width: 640px) {
+  /* sellos un poco más grandes y con aire */
+  .sellos { row-gap: 30px; padding-top: 34px; }
+  .sellos li { font-size: .7rem; line-height: 1.5; }
+  /* sus datos, uno debajo de otro */
+  .quien__datos { grid-template-columns: 1fr; gap: 0; padding-top: 8px; }
+  .quien__datos li { display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--linea); }
+  .quien__datos b { font-size: 2rem; min-width: 104px; }
+  .quien__datos span { margin-top: 0; font-size: .95rem; }
+  .quien__cita { font-size: 1.04rem; margin-top: 28px; }
+  /* opiniones: tarjetas que se deslizan en vez de 9 seguidas */
+  .opi { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84vw; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--margen); gap: 14px; margin: 0 calc(-1 * var(--margen)); padding: 4px var(--margen) 10px; scrollbar-width: none; align-items: stretch; }
+  .opi::-webkit-scrollbar { display: none; }
+  .opi__it { scroll-snap-align: start; }
+  /* pasos: fotos más apaisadas para que la sección respire sin hacerse eterna */
+  .paso picture { aspect-ratio: 4 / 3; }
+  .paso__n { margin-top: 20px; }
+  /* galería */
+  .gal { gap: 12px; }
+  .gal figcaption { font-size: .76rem; padding: 34px 12px 12px; }
+  /* antes y después */
+  .ad__it h3 { margin-top: 2px; }
+  .ad__it p { font-size: .98rem; }
+}
